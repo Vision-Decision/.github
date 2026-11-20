@@ -1,44 +1,45 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg">
-    <img src="assets/logo-light.svg" width="96" alt="Vision-Decision">
-  </picture>
-</p>
-
-<h1 align="center">Vision-Decision</h1>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+  <img src="assets/hero-light.svg" width="100%" alt="Vision-Decision builds Glance, which answers many questions about one image in one forward pass, returning typed decisions: a box, yes or no, a choice, or not there. A typical VLM decodes free text token by token for every question; Glance stops after prefill and reads every answer from heads.">
+</picture>
 
 <p align="center">
-  <b>Vision models that decide, not just describe.</b><br>
-  Ask many questions about an image. Get typed answers (a box, yes / no, a choice, or <i>"it's not there"</i>) in one forward pass.
+  <br>
+  <a href="https://huggingface.co/Vision-Decision/Glance-4B-preview"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Try%20Glance--4B--preview-2a78d6?style=for-the-badge" alt="Try Glance-4B-preview"></a>
+  <br>
+  视觉决策模型：一次前向，回答一张图上的许多问题。
 </p>
-
-<p align="center">
-  <a href="https://huggingface.co/Vision-Decision"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Vision--Decision-FFD21E" alt="Hugging Face"></a>
-</p>
-
----
 
 ### Why
 
-Agents that look at screens, photos and videos mostly need **decisions**: *Where is the button? Is the object there at all? Which of these clips shows it?*
-Generative VLMs answer by writing text one token at a time. That is slow when you have many questions, and "not there" becomes a guess.
-We build models and systems that read each decision straight from one shared pass over the image, so it is fast and the answer to "not there" can be calibrated.
-
-### Projects
-
-| | What it is | Links |
-|---|---|---|
-| **Glance** | A 4B decision VLM built on Qwen3.5-4B. One prefill answers many typed questions about an image. | [model](https://huggingface.co/Vision-Decision/Glance-4B-preview) · [repo](https://github.com/Vision-Decision/Glance) |
-| **glance-engine** | Serving engine for decision models: many questions per image, one question over many cached images or clips. Faster than bf16 vLLM and SGLang in all 65 workloads we measured. | [repo](https://github.com/Vision-Decision/glance-engine) |
-| **glance-core** | Model package, training, data builders and evaluation for Glance. | [repo](https://github.com/Vision-Decision/glance-core) |
-| **glance-video** | Glance for video: a clip-scanning search tool that agents can call. | [repo](https://github.com/Vision-Decision/glance-video) |
-| **Glance-Data** | Grounding data with exact boxes, many phrasings, Chinese requests, hard negatives and multi-target queries. | [repo](https://github.com/Vision-Decision/Glance-Data) · [dataset](https://huggingface.co/datasets/Vision-Decision/Glance-Data) |
-| **Glance-X** | Two-way grounding model (text → box and box → text). | [repo](https://github.com/Vision-Decision/Glance-X) · [4B](https://huggingface.co/Vision-Decision/Glance-X-4B) · [Lite](https://huggingface.co/Vision-Decision/Glance-X-Lite) |
+Agents mostly need decisions, not prose: *Where is the button? Is it there at all? Which clip shows it?* Generative VLMs write every answer token by token, which is slow and turns "not there" into a guess; Glance reads them all from one pass.
 
 ### Highlights
 
-- **65 / 65:** glance-engine beats bf16 vLLM and SGLang on every image, GUI, video and multi-client workload we measured.
-- **50.1 → 68.75 on ScreenSpot-Pro** with per-request adapter strength and in-block zoom, no extra training.
-- **"Not there" as a first-class answer:** presence is read by a trained head and can be calibrated to a stated error rate, rather than left to the decoder.
+- **ScreenSpot-Pro accuracy 50.1 → 68.75 with the same Glance weights, no extra training.** Two inference-time controls do it: per-request adapter strength and in-block zoom.
+- **Calibrated "not there".** Presence is read by a trained head and calibrated to a stated error rate, instead of left to the decoder.
+- **Faster than bf16 vLLM and SGLang in 65 / 65 workloads.** glance-engine wins on every image, GUI, video and multi-client workload we measured.
 
-<sub>Licenses are listed in each repository.</sub>
+### Getting started
+
+1. Read the [Glance-4B-preview model card](https://huggingface.co/Vision-Decision/Glance-4B-preview) on Hugging Face.
+2. Check the [Glance repo](https://github.com/Vision-Decision/Glance) for setup and examples.
+
+### Projects
+
+**Models**
+
+- [**Glance**](https://github.com/Vision-Decision/Glance): a 4B decision VLM built on Qwen3.5-4B. One pass answers many typed questions about an image.
+- [**Glance-X**](https://github.com/Vision-Decision/Glance-X): two-way grounding, text → box and box → text, in [4B](https://huggingface.co/Vision-Decision/Glance-X-4B) and [Lite](https://huggingface.co/Vision-Decision/Glance-X-Lite) sizes.
+
+**Data**
+
+- [**Glance-Data**](https://github.com/Vision-Decision/Glance-Data): grounding data with exact boxes, many phrasings, Chinese requests, hard negatives and multi-target queries, also on [Hugging Face](https://huggingface.co/datasets/Vision-Decision/Glance-Data).
+
+**Systems** (opening soon)
+
+- **glance-engine**: serving engine for decision models. Many questions per image, or one question over many cached images or clips.
+- **glance-core**: model package, training, data builders and evaluation for Glance.
+- **glance-video**: Glance for video, a clip-scanning search tool that agents can call.
+
+<sub>Questions or ideas? Open an issue on [Glance](https://github.com/Vision-Decision/Glance/issues). Licenses: see each repository.</sub>
