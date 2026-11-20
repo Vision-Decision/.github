@@ -1,10 +1,5 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/Vision-Decision/Glance-X-Lite/main/assets/demo.gif" width="860" alt="Demo: 256 images, one request, a scan picks the right image, the view zooms in, and new requests find each target in it">
-  <br>
-  <sub>One request over 256 cached images (68 ms on one GPU) picks the image; then new requests find their targets
-  inside it. Every box, score, ranking and timing is a real Glance-X-Lite output on held-out images.
-  <a href="https://github.com/Vision-Decision/Glance-X-Lite/blob/main/assets/demo.mp4">MP4 version</a> · made with <a href="https://github.com/Vision-Decision/Glance-X-Lite/blob/main/demo/render_story.py"><code>demo/</code></a> ·
-  images from MS COCO.</sub>
 </p>
 
 <picture>
