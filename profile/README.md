@@ -17,9 +17,9 @@ Agents mostly need decisions, not prose: *Where is the button? Is it there at al
 
 ### Highlights
 
-- **ScreenSpot-Pro accuracy 50.1 → 68.75 with the same Glance weights, no extra training.** Two inference-time controls do it: per-request adapter strength and in-block zoom.
-- **Calibrated "not there".** Presence is read by a trained head and calibrated to a stated error rate, instead of left to the decoder.
-- **Faster than bf16 vLLM and SGLang in 65 / 65 workloads.** glance-engine wins on every image, GUI, video and multi-client workload we measured.
+- **A new data pipeline and harder grounding data.** Glance-Data adds hard negatives involving attributes, counts, and spatial relations, along with requests that refer to multiple objects. The pipeline uses human-annotated COCO boxes and sets aside separate images for evaluation. [Glance-Data](https://github.com/Vision-Decision/Glance-Data)
+- **4B and 0.8B models.** Glance makes typed visual decisions. Glance-X explores a bidirectional grounding architecture that reuses image computation across requests or request computation across images. [Glance](https://github.com/Vision-Decision/Glance)
+- **GPU and Mac inference engines.** The GPU engine targets 4B models across Glance and Glance-X. The Mac engine targets the 0.8B Glance-X-Lite model on Apple silicon. [Glance-X-Lite](https://github.com/Vision-Decision/Glance-X-Lite)
 
 ### Projects
 
