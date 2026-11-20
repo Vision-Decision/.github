@@ -21,17 +21,12 @@ Agents mostly need decisions, not prose: *Where is the button? Is it there at al
 - **Calibrated "not there".** Presence is read by a trained head and calibrated to a stated error rate, instead of left to the decoder.
 - **Faster than bf16 vLLM and SGLang in 65 / 65 workloads.** glance-engine wins on every image, GUI, video and multi-client workload we measured.
 
-### Getting started
-
-1. Read the [Glance-4B-preview model card](https://huggingface.co/Vision-Decision/Glance-4B-preview) on Hugging Face.
-2. Check the [Glance repo](https://github.com/Vision-Decision/Glance) for setup and examples.
-
 ### Projects
 
 **Models**
 
 - [**Glance**](https://github.com/Vision-Decision/Glance): a 4B decision VLM built on Qwen3.5-4B. One pass answers many typed questions about an image.
-- [**Glance-X**](https://github.com/Vision-Decision/Glance-X): two-way grounding, text → box and box → text, in [4B](https://huggingface.co/Vision-Decision/Glance-X-4B) and [Lite](https://huggingface.co/Vision-Decision/Glance-X-Lite) sizes.
+- [**Glance-X-Lite**](https://github.com/Vision-Decision/Glance-X-Lite) is a 0.8B grounding model that finds objects from text. It supports many requests per image and one request across many images. [Model weights](https://huggingface.co/Vision-Decision/Glance-X-Lite).
 
 **Data**
 
@@ -42,5 +37,3 @@ Agents mostly need decisions, not prose: *Where is the button? Is it there at al
 - **glance-engine**: serving engine for decision models. Many questions per image, or one question over many cached images or clips.
 - **glance-core**: model package, training, data builders and evaluation for Glance.
 - **glance-video**: Glance for video, a clip-scanning search tool that agents can call.
-
-<sub>Questions or ideas? Open an issue on [Glance](https://github.com/Vision-Decision/Glance/issues). Licenses: see each repository.</sub>
