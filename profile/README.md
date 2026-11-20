@@ -19,7 +19,7 @@ Agents mostly need decisions, not prose: *Where is the button? Is it there at al
 
 - **A new data pipeline and harder grounding data.** Glance-Data adds hard negatives involving attributes, counts, and spatial relations, along with requests that refer to multiple objects. The pipeline uses human-annotated COCO boxes and sets aside separate images for evaluation. [Glance-Data](https://github.com/Vision-Decision/Glance-Data)
 - **4B and 0.8B models.** Glance makes typed visual decisions. Glance-X explores a bidirectional grounding architecture that reuses image computation across requests or request computation across images. [Glance](https://github.com/Vision-Decision/Glance)
-- **GPU and Mac inference engines.** The GPU engine targets 4B models across Glance and Glance-X. The Mac engine targets the 0.8B Glance-X-Lite model on Apple silicon. [Glance-X-Lite](https://github.com/Vision-Decision/Glance-X-Lite)
+- **GPU and Mac inference engines.** The [GPU engine](https://github.com/Vision-Decision/Glance-Engine) targets 4B models across Glance and Glance-X. The Mac engine targets the 0.8B Glance-X-Lite model on Apple silicon. [Glance-X-Lite](https://github.com/Vision-Decision/Glance-X-Lite)
 
 ### Projects
 
@@ -34,6 +34,6 @@ Agents mostly need decisions, not prose: *Where is the button? Is it there at al
 
 **Systems**
 
-- [**glance-engine**](https://github.com/Vision-Decision/glance-engine): serving engine for decision models. Many questions per image, or one question over many cached images or clips.
-- [**glance-core**](https://github.com/Vision-Decision/glance-core): model package, training, data builders and evaluation for Glance.
-- [**glance-video**](https://github.com/Vision-Decision/glance-video): Glance for video, a clip-scanning search tool that agents can call.
+- [**Glance-Engine**](https://github.com/Vision-Decision/Glance-Engine): serving engine for decision models. Many questions per image, or one question over many cached images or clips.
+- [**Glance-Core**](https://github.com/Vision-Decision/Glance-Core): model package, training, data builders and evaluation for Glance.
+- [**Glance-Video**](https://github.com/Vision-Decision/Glance-Video): Glance for video, a clip-scanning search tool that agents can call.
