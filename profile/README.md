@@ -32,8 +32,8 @@ Agents mostly need decisions, not prose: *Where is the button? Is it there at al
 
 - [**Glance-Data**](https://github.com/Vision-Decision/Glance-Data): grounding data with exact boxes, many phrasings, Chinese requests, hard negatives and multi-target queries, also on [Hugging Face](https://huggingface.co/datasets/Vision-Decision/Glance-Data).
 
-**Systems** (opening soon)
+**Systems**
 
-- **glance-engine**: serving engine for decision models. Many questions per image, or one question over many cached images or clips.
-- **glance-core**: model package, training, data builders and evaluation for Glance.
-- **glance-video**: Glance for video, a clip-scanning search tool that agents can call.
+- [**glance-engine**](https://github.com/Vision-Decision/glance-engine): serving engine for decision models. Many questions per image, or one question over many cached images or clips.
+- [**glance-core**](https://github.com/Vision-Decision/glance-core): model package, training, data builders and evaluation for Glance.
+- [**glance-video**](https://github.com/Vision-Decision/glance-video): Glance for video, a clip-scanning search tool that agents can call.
