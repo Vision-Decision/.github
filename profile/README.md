@@ -1,12 +1,18 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Vision-Decision/Glance-X-Lite/main/assets/demo.gif" width="860" alt="Demo: 256 images, one request, a scan picks the right image, the view zooms in, and new requests find each target in it">
+  <br>
+  <sub>One request over 256 cached images (68 ms on one GPU) picks the image; then new requests find their targets
+  inside it. Every box, score, ranking and timing is a real Glance-X-Lite output on held-out images.
+  <a href="https://github.com/Vision-Decision/Glance-X-Lite/blob/main/assets/demo.mp4">MP4 version</a> · made with <a href="https://github.com/Vision-Decision/Glance-X-Lite/blob/main/demo/render_story.py"><code>demo/</code></a> ·
+  images from MS COCO.</sub>
+</p>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
   <img src="assets/hero-light.svg" width="100%" alt="Vision-Decision builds Glance, which answers many questions about one image in one forward pass, returning typed decisions: a box, yes or no, a choice, or not there. A typical VLM decodes free text token by token for every question; Glance stops after prefill and reads every answer from heads.">
 </picture>
 
 <p align="center">
-  <br>
-  <a href="https://huggingface.co/Vision-Decision/Glance-4B-preview"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Try%20Glance--4B--preview-2a78d6?style=for-the-badge" alt="Try Glance-4B-preview"></a>
-  <br>
   视觉决策模型：一次前向，回答一张图上的许多问题。
 </p>
 
