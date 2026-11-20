@@ -19,7 +19,7 @@ Agents mostly need decisions, not prose: *Where is the button? Is it there at al
 
 - **A new data pipeline and harder grounding data.** Glance-COCO adds hard negatives involving attributes, counts, and spatial relations, along with requests that refer to multiple objects. The pipeline uses human-annotated COCO boxes and sets aside separate images for evaluation. [Glance-COCO](https://github.com/Vision-Decision/Glance-COCO)
 - **4B and 0.8B models.** Glance makes typed visual decisions. Glance-X explores a bidirectional grounding architecture that reuses image computation across requests or request computation across images. [Glance](https://github.com/Vision-Decision/Glance)
-- **GPU and Mac inference engines.** The [GPU engine](https://github.com/Vision-Decision/Glance-Engine) targets 4B models across Glance and Glance-X. The Mac engine targets the 0.8B Glance-X-Lite model on Apple silicon. [Glance-X-MLX](https://github.com/Vision-Decision/Glance-X-MLX)
+- **GPU and Mac inference engines.** [Glance-Engine](https://github.com/Vision-Decision/Glance-Engine) runs 4B models across Glance and Glance-X on GPUs. [Glance-X-MLX](https://github.com/Vision-Decision/Glance-X-MLX) runs the 0.8B Glance-X-Lite model on Apple silicon.
 
 ### Projects
 
