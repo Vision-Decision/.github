@@ -17,7 +17,7 @@ Agents mostly need decisions, not prose: *Where is the button? Is it there at al
 
 ### Highlights
 
-- **A new data pipeline and harder grounding data.** Glance-Data adds hard negatives involving attributes, counts, and spatial relations, along with requests that refer to multiple objects. The pipeline uses human-annotated COCO boxes and sets aside separate images for evaluation. [Glance-Data](https://github.com/Vision-Decision/Glance-Data)
+- **A new data pipeline and harder grounding data.** Glance-COCO adds hard negatives involving attributes, counts, and spatial relations, along with requests that refer to multiple objects. The pipeline uses human-annotated COCO boxes and sets aside separate images for evaluation. [Glance-COCO](https://github.com/Vision-Decision/Glance-COCO)
 - **4B and 0.8B models.** Glance makes typed visual decisions. Glance-X explores a bidirectional grounding architecture that reuses image computation across requests or request computation across images. [Glance](https://github.com/Vision-Decision/Glance)
 - **GPU and Mac inference engines.** The [GPU engine](https://github.com/Vision-Decision/Glance-Engine) targets 4B models across Glance and Glance-X. The Mac engine targets the 0.8B Glance-X-Lite model on Apple silicon. [Glance-X-Lite](https://github.com/Vision-Decision/Glance-X-Lite)
 
@@ -30,7 +30,7 @@ Agents mostly need decisions, not prose: *Where is the button? Is it there at al
 
 **Data**
 
-- [**Glance-Data**](https://github.com/Vision-Decision/Glance-Data): grounding data with exact boxes, many phrasings, Chinese requests, hard negatives and multi-target queries, also on [Hugging Face](https://huggingface.co/datasets/Vision-Decision/Glance-Data).
+- [**Glance-COCO**](https://github.com/Vision-Decision/Glance-COCO): grounding data with exact boxes, many phrasings, Chinese requests, hard negatives and multi-target queries, also on [Hugging Face](https://huggingface.co/datasets/Vision-Decision/Glance-COCO).
 
 **Systems**
 
