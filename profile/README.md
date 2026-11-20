@@ -41,4 +41,4 @@ We build models and systems that read each decision straight from one shared pas
 - **50.1 → 68.75 on ScreenSpot-Pro** with per-request adapter strength and in-block zoom, no extra training.
 - **"Not there" as a first-class answer:** presence is read by a trained head and can be calibrated to a stated error rate, rather than left to the decoder.
 
-<sub>Code is Apache-2.0 unless a repo says otherwise. Data licenses are listed per dataset.</sub>
+<sub>Licenses are listed in each repository.</sub>
